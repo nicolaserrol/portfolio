@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Errol June Nicolas — Lead Software Engineer · React Native</title>
+  <meta name="description" content="Lead Software Engineer with 8+ years shipping production React Native and web applications across fintech, healthcare, retail, fitness, automotive and SaaS." />
+  <meta name="theme-color" content="#0F172A" />
+  <meta property="og:title" content="Errol June Nicolas — Lead Software Engineer" />
+  <meta property="og:description" content="React Native · Mobile · TypeScript · Supabase · AI integrations. Portfolio and selected work." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://nicolaserrol.github.io/portfolio/assets/og.png" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/tokens.css" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/hero.css" />
+  <link rel="stylesheet" href="./css/hero-scene.css" />
+  <link rel="stylesheet" href="./css/about.css" />
+  <link rel="stylesheet" href="./css/skills.css" />
+  <link rel="stylesheet" href="./css/projects.css" />
+  <link rel="stylesheet" href="./css/experience.css" />
+  <link rel="stylesheet" href="./css/contact.css" />
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAV: owned by hero agent (js/hero.js, css/hero.css) -->
+  <header id="site-nav" class="site-nav" aria-label="Primary">
+    <!--@@NAV@@-->
+  </header>
+
+  <main id="main">
+    <!-- HERO: owned by hero agent (text) + hero-scene agent (canvas) -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <!--@@HERO@@-->
+    </section>
+
+    <!-- ABOUT: owned by about-skills agent -->
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <!--@@ABOUT@@-->
+    </section>
+
+    <!-- PROJECTS: owned by projects agent -->
+    <section id="projects" class="section projects" aria-labelledby="projects-title">
+      <!--@@PROJECTS@@-->
+    </section>
+
+    <!-- EXPERIENCE: owned by experience agent -->
+    <section id="experience" class="section experience" aria-labelledby="experience-title">
+      <!--@@EXPERIENCE@@-->
+    </section>
+
+    <!-- SKILLS: owned by about-skills agent -->
+    <section id="skills" class="section skills" aria-labelledby="skills-title">
+      <!--@@SKILLS@@-->
+    </section>
+
+    <!-- CONTACT: owned by contact agent -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <!--@@CONTACT@@-->
+    </section>
+  </main>
+
+  <!-- FOOTER: owned by contact agent -->
+  <footer id="site-footer" class="site-footer">
+    <!--@@FOOTER@@-->
+  </footer>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

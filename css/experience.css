@@ -1,0 +1,204 @@
+/* Experience — editorial left-rail timeline. Tokens only. */
+
+.experience {
+  position: relative;
+  overflow: hidden;
+}
+
+.experience::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 55% at 12% 15%, var(--color-accent-soft), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.experience .container {
+  position: relative;
+  z-index: 1;
+}
+
+.experience-header {
+  max-width: 46rem;
+}
+
+.experience-noscript {
+  color: var(--color-fg-muted);
+  max-width: 60ch;
+  margin-top: var(--space-6);
+}
+
+/* Rail + line */
+
+.experience-timeline-wrap {
+  position: relative;
+  margin-top: var(--space-16);
+  max-width: 54rem;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  left: calc(1.25rem - 1px);
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-accent) 0%, var(--color-border-subtle) 90%);
+  transform: scaleY(1);
+  transform-origin: top;
+  z-index: 0;
+}
+
+.experience-timeline {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+/* Entry */
+
+.timeline-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  column-gap: var(--space-6);
+}
+
+.timeline-marker-col {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.45rem;
+}
+
+.timeline-marker {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: var(--radius-full);
+  background: var(--color-bg);
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-bg);
+}
+
+.timeline-entry--venture .timeline-marker {
+  background: var(--color-accent);
+  border-color: var(--color-accent-strong);
+  box-shadow: 0 0 0 4px var(--color-bg), 0 0 18px 2px var(--color-accent-soft);
+}
+
+.timeline-content {
+  min-width: 0;
+  padding-bottom: var(--space-2);
+}
+
+.timeline-entry--venture .timeline-content {
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  background: var(--color-accent-soft);
+  padding: var(--space-6);
+}
+
+.timeline-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.timeline-chapter,
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.timeline-chapter { color: var(--color-accent); }
+.timeline-period { color: var(--color-fg-subtle); }
+
+.timeline-role {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-fg);
+  margin-top: var(--space-2);
+}
+
+.timeline-company {
+  color: var(--color-fg-muted);
+  font-size: var(--text-base);
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.timeline-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.timeline-bullet-item {
+  position: relative;
+  padding-left: var(--space-4);
+  color: var(--color-fg-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.timeline-bullet-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: var(--radius-full);
+  background: var(--color-border);
+}
+
+.timeline-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--touch-min);
+  margin-top: var(--space-2);
+  padding-inline: var(--space-2);
+  margin-inline-start: calc(var(--space-2) * -1);
+  border-radius: var(--radius-sm);
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: background-color var(--dur-base) var(--ease-expo);
+}
+
+.timeline-toggle:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.timeline-toggle-icon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform var(--dur-base) var(--ease-expo);
+}
+
+.timeline-toggle.is-expanded .timeline-toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Breakpoints */
+
+@media (max-width: 767px) {
+  .timeline-entry {
+    grid-template-columns: 1.75rem 1fr;
+    column-gap: var(--space-4);
+  }
+  .timeline-line { left: calc(0.875rem - 1px); }
+  .experience-timeline { gap: var(--space-12); }
+  .timeline-entry--venture .timeline-content { padding: var(--space-4); }
+}
+
+@media (min-width: 1024px) {
+  .timeline-role { font-size: var(--text-2xl); }
+}

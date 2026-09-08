@@ -1,0 +1,49 @@
+<span class="site-nav__progress" aria-hidden="true"><span class="site-nav__progress-bar" id="nav-progress"></span></span>
+<div class="site-nav__bar container">
+  <a class="site-nav__logo" href="#hero" aria-label="Errol Nicolas — back to top">
+    <span aria-hidden="true">EN</span>
+    <span class="sr-only">Errol Nicolas</span>
+  </a>
+
+  <nav class="site-nav__links" aria-label="Section">
+    <ul>
+      <li><a href="#about" data-nav-link="about">About</a></li>
+      <li><a href="#projects" data-nav-link="projects">Projects</a></li>
+      <li><a href="#experience" data-nav-link="experience">Experience</a></li>
+      <li><a href="#skills" data-nav-link="skills">Skills</a></li>
+      <li><a href="#contact" data-nav-link="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="site-nav__actions">
+    <a class="btn btn-ghost site-nav__resume" href="./assets/Errol-Nicolas-Resume.pdf" download>
+      <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+      <span>Resume</span>
+    </a>
+    <button
+      type="button"
+      class="site-nav__toggle"
+      id="nav-toggle"
+      aria-expanded="false"
+      aria-controls="nav-mobile-menu"
+      aria-label="Open menu"
+    >
+      <svg class="icon site-nav__toggle-icon site-nav__toggle-icon--open" aria-hidden="true" viewBox="0 0 24 24"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <svg class="icon site-nav__toggle-icon site-nav__toggle-icon--close" aria-hidden="true" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="site-nav__mobile" id="nav-mobile-menu">
+  <ul class="site-nav__mobile-links">
+    <li><a href="#about" data-nav-link-mobile="about">About</a></li>
+    <li><a href="#projects" data-nav-link-mobile="projects">Projects</a></li>
+    <li><a href="#experience" data-nav-link-mobile="experience">Experience</a></li>
+    <li><a href="#skills" data-nav-link-mobile="skills">Skills</a></li>
+    <li><a href="#contact" data-nav-link-mobile="contact">Contact</a></li>
+  </ul>
+  <a class="btn btn-primary site-nav__mobile-resume" href="./assets/Errol-Nicolas-Resume.pdf" download>
+    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+    <span>Download resume</span>
+  </a>
+</div>

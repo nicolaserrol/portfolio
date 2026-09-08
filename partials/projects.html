@@ -1,0 +1,38 @@
+<div class="container projects__container">
+  <div class="projects__header">
+    <span class="eyebrow" data-reveal>Selected work</span>
+    <h2 id="projects-title" class="section-title" data-reveal>Production software across 9 industries</h2>
+    <p class="section-lede" data-reveal>
+      Fourteen shipped engagements spanning fintech, healthcare, retail, automotive, travel and field
+      services — mobile-first, backend-heavy, and increasingly AI-assisted. Filter by discipline or open
+      any card for the full story.
+    </p>
+  </div>
+
+  <div class="projects__toolbar">
+    <div class="projects-filters" role="group" aria-label="Filter projects" id="projects-filters"></div>
+    <p class="projects-count" id="projects-count" aria-live="polite"></p>
+  </div>
+
+  <ul class="projects-grid" id="projects-grid"></ul>
+</div>
+
+<dialog id="project-dialog" class="project-dialog" aria-labelledby="project-dialog-title">
+  <div class="project-dialog__panel">
+    <button type="button" class="project-dialog__close" data-dialog-close aria-label="Close project details">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button>
+    <div class="project-dialog__scroll">
+      <p class="project-dialog__industry" id="project-dialog-industry"></p>
+      <h3 class="project-dialog__title" id="project-dialog-title"></h3>
+      <p class="project-dialog__meta" id="project-dialog-meta"></p>
+      <p class="project-dialog__summary" id="project-dialog-summary"></p>
+      <div class="project-dialog__stack" id="project-dialog-stack"></div>
+      <h4 class="project-dialog__outcomes-title">Outcomes</h4>
+      <ul class="project-dialog__outcomes" id="project-dialog-outcomes"></ul>
+    </div>
+  </div>
+</dialog>

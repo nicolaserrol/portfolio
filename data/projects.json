@@ -1,0 +1,227 @@
+{
+  "tags": ["Mobile", "Web", "AI", "Backend"],
+  "projects": [
+    {
+      "id": "cmms",
+      "title": "Maintenance & Inventory Management Platform",
+      "industry": "Facilities & industrial services",
+      "role": "Lead engineer",
+      "period": "2026",
+      "stack": ["React", "TypeScript", "Node.js", "PostgreSQL", "Docker", "MCP plugins"],
+      "tags": ["Web", "Backend", "AI"],
+      "featured": true,
+      "summary": "A CMMS + IMS for an industrial services company: work orders, preventive maintenance, parts inventory and service operations in one system, with an AI plugin layer for operators.",
+      "outcomes": [
+        "67 operator workflows taken through UAT against a shared acceptance sheet",
+        "Plugin/MCP architecture lets AI assistants act on work orders safely",
+        "Requirements traceability (FRD → RTM → test cases) kept live with the code"
+      ]
+    },
+    {
+      "id": "tour-app",
+      "title": "Guided-Tour Mobile App",
+      "industry": "Travel & tourism",
+      "role": "Lead mobile engineer",
+      "period": "2026",
+      "stack": ["React Native", "Expo", "TypeScript", "iOS"],
+      "tags": ["Mobile"],
+      "featured": true,
+      "summary": "An iOS-first React Native app for self-guided tours: location-aware stops, media playback and offline-friendly content, built from a signed SOW with full requirements traceability.",
+      "outcomes": [
+        "Shipped through TestFlight to client UAT on a fixed timeline",
+        "Feature scope tracked card-by-card from kickoff to closure",
+        "Offline-tolerant content model for spotty connectivity on tours"
+      ]
+    },
+    {
+      "id": "financing",
+      "title": "Client Financing Workflow Platform",
+      "industry": "FinTech",
+      "role": "Lead / reviewer",
+      "period": "2026",
+      "stack": ["React", "Node.js", "PostgreSQL", "Docker"],
+      "tags": ["Web", "Backend"],
+      "featured": true,
+      "summary": "A financing-application platform that moves applicants through intake, review, approval and deployment stages, with an integrations lane for third-party services.",
+      "outcomes": [
+        "Production deployment with a staged QA → UAT → deploy pipeline",
+        "Integration backlog managed separately from core delivery",
+        "Client-side questions routed through a dedicated dev queue"
+      ]
+    },
+    {
+      "id": "field-ops",
+      "title": "Field-Service Management System",
+      "industry": "Septic & field services",
+      "role": "Lead / reviewer",
+      "period": "2026",
+      "stack": ["React", "Node.js", "Docker", "Make"],
+      "tags": ["Web", "Backend"],
+      "featured": false,
+      "summary": "Scheduling, dispatch and job tracking for a septic and service company, delivered across two phased SOWs with contract data driving the requirements documents.",
+      "outcomes": [
+        "Two-phase delivery with a regenerable FRD/RTM/test-case suite",
+        "Containerised deploy with a one-command Makefile",
+        "Technician-facing flows designed for phone use in the field"
+      ]
+    },
+    {
+      "id": "due-diligence",
+      "title": "Due-Diligence Workflow with Role-Based Approvals",
+      "industry": "Investment operations",
+      "role": "Reviewer",
+      "period": "2026",
+      "stack": ["React", "Tailwind CSS", "Python API", "Docker"],
+      "tags": ["Web", "Backend"],
+      "featured": false,
+      "summary": "An MVP for running structured due-diligence checklists with coordinator and approver roles, sign-off gates and an auditable trail of decisions.",
+      "outcomes": [
+        "RBAC model extended so approvers gain full coordinator parity",
+        "Team sign-off gates enforced in the UI and API",
+        "Docker Compose stack for one-command local and staging runs"
+      ]
+    },
+    {
+      "id": "intelligence",
+      "title": "Knowledge & Authority Engine",
+      "industry": "Marketing intelligence / AI",
+      "role": "Reviewer",
+      "period": "2026",
+      "stack": ["TypeScript monorepo", "LLM pipelines", "PostgreSQL"],
+      "tags": ["AI", "Backend", "Web"],
+      "featured": true,
+      "summary": "A monorepo of LLM-driven engines that ingest a company's knowledge base and produce authority content, with structured build plans and versioned engine specs.",
+      "outcomes": [
+        "Versioned engine specs kept in the repo alongside the code",
+        "Monorepo split into apps and packages for independent deploys",
+        "Conversation logs feed continuous prompt refinement"
+      ]
+    },
+    {
+      "id": "delivery-portal",
+      "title": "Client-Facing Delivery Portal",
+      "industry": "Agency operations",
+      "role": "Reviewer on every PR",
+      "period": "2026",
+      "stack": ["React", "Fastify", "Prisma", "PostgreSQL"],
+      "tags": ["Web", "Backend"],
+      "featured": false,
+      "summary": "An internal portal where clients follow delivery status, milestones and deliverables across projects, with a Fastify + Prisma backend and staged deploy scripts.",
+      "outcomes": [
+        "Staging and production deploy scripts with health checks",
+        "Buyer-intent and marketing requirement sets traced to features",
+        "Every PR reviewed against the FRD before merge"
+      ]
+    },
+    {
+      "id": "coi",
+      "title": "Certificate-of-Insurance Automation",
+      "industry": "Insurance operations",
+      "role": "Backend lead",
+      "period": "2026",
+      "stack": ["Fastify", "Prisma", "PostgreSQL", "Node.js"],
+      "tags": ["Backend", "AI"],
+      "featured": false,
+      "summary": "Automates the collection, validation and expiry tracking of certificates of insurance from vendors, replacing a manual inbox-and-spreadsheet process.",
+      "outcomes": [
+        "Fastify + Prisma service with typed request/response contracts",
+        "Document intake pipeline with structured extraction",
+        "Expiry reminders replace manual follow-up"
+      ]
+    },
+    {
+      "id": "email-triage",
+      "title": "Email Triage Automation",
+      "industry": "Trades / SMB",
+      "role": "Lead",
+      "period": "2026",
+      "stack": ["Node.js", "Cloud Run", "Cloud Build", "LLM"],
+      "tags": ["AI", "Backend"],
+      "featured": false,
+      "summary": "An LLM-assisted service that reads a trades company's shared inbox, classifies requests, and routes them to the right queue, deployed on Cloud Run.",
+      "outcomes": [
+        "Discovery-to-proposal-to-build in one repo with contract data",
+        "Cloud Build pipeline to Cloud Run with a single Dockerfile",
+        "Classification rules refined from real inbox samples"
+      ]
+    },
+    {
+      "id": "salvage",
+      "title": "Vehicle-Salvage Platform + AI Estimate OCR",
+      "industry": "Automotive",
+      "role": "Lead mobile engineer",
+      "period": "2025 — present",
+      "stack": ["React Native", "Expo", "TypeScript", "Redux", "OpenAI API"],
+      "tags": ["Mobile", "AI"],
+      "featured": true,
+      "summary": "Ongoing enhancement of a production vehicle-salvage platform, including an AI document-scanning workflow that extracts repair-estimate data with the OpenAI API.",
+      "outcomes": [
+        "Repair-estimate data extraction automated end-to-end",
+        "Manual encoding effort and human error reduced",
+        "Mobile features aligned with day-to-day yard operations"
+      ]
+    },
+    {
+      "id": "fitness",
+      "title": "Fitness App with Multi-Source Health Sync",
+      "industry": "Fitness & health",
+      "role": "Lead mobile engineer",
+      "period": "2025",
+      "stack": ["React Native", "Expo", "Victory Native", "Apple HealthKit", "Oura", "Garmin"],
+      "tags": ["Mobile"],
+      "featured": true,
+      "summary": "A React Native fitness app with interactive health and analytics dashboards that unifies Apple HealthKit, Oura and Garmin data into one mobile experience.",
+      "outcomes": [
+        "Three wearable ecosystems synced into a single data model",
+        "Interactive dashboards with Victory Native",
+        "Performance tuned for large daily datasets"
+      ]
+    },
+    {
+      "id": "retail-suite",
+      "title": "Retail Supply-Chain & FinTech Mobile Suite",
+      "industry": "Retail & FinTech",
+      "role": "Mobile Solutions Engineer",
+      "period": "2020 — 2025",
+      "stack": ["React Native", "Expo", "TypeScript", "Redux", "Victory Native"],
+      "tags": ["Mobile"],
+      "featured": true,
+      "summary": "Five production apps connecting principals, supermarkets, distributors and sari-sari stores, plus a capital-assistance platform for digital business transactions.",
+      "outcomes": [
+        "Five apps led end-to-end from architecture to store release",
+        "KPI dashboards for enterprise customers",
+        "Push notifications, deep linking and offline data handling"
+      ]
+    },
+    {
+      "id": "nuptl",
+      "title": "Nuptl — Wedding Technology Startup",
+      "industry": "Consumer / events",
+      "role": "Founder",
+      "period": "Side venture",
+      "stack": ["React Native", "React", "Supabase"],
+      "tags": ["Mobile", "Web"],
+      "featured": false,
+      "summary": "Founded and launched a wedding-planning product with both a React Native mobile app and a web platform, owning product and engineering direction.",
+      "outcomes": [
+        "Mobile app and web platform launched from concept to production",
+        "Product architecture, frontend and backend integration owned solo"
+      ]
+    },
+    {
+      "id": "healthcare",
+      "title": "Healthcare Appointment Platform",
+      "industry": "Healthcare",
+      "role": "Software Engineer",
+      "period": "2017 — 2020",
+      "stack": ["React Native", "ReactJS", "Expo", "GraphQL", "TypeScript"],
+      "tags": ["Mobile", "Web"],
+      "featured": false,
+      "summary": "Patient, doctor and clinic workflows including appointment management, built on API-driven architectures.",
+      "outcomes": [
+        "Customer-facing mobile and web flows for three user types",
+        "GraphQL data layer across mobile and web"
+      ]
+    }
+  ]
+}

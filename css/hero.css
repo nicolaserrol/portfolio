@@ -1,0 +1,237 @@
+/* Owned by hero agent: .site-nav (sticky glass nav) + .hero (hero text layer). */
+/* NOTE: css/hero-scene.css (owned by another agent) styles #hero-canvas only. */
+
+/* Anchor targets sit under a sticky header; compensate so #about etc. land below it. */
+html { scroll-padding-top: var(--nav-h); }
+
+/* ---------- Site nav ---------- */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid transparent;
+  transition: transform var(--dur-slow) var(--ease-expo),
+              border-color var(--dur-base) var(--ease-expo),
+              background-color var(--dur-base) var(--ease-expo);
+}
+
+.site-nav--scrolled { border-bottom-color: var(--color-border-subtle); }
+.site-nav--hidden { transform: translateY(-100%); }
+
+.site-nav__progress {
+  position: absolute; inset: 0 0 auto 0; height: 2px;
+  background: var(--color-border-subtle);
+  overflow: hidden;
+}
+.site-nav__progress-bar {
+  display: block; height: 100%; width: 100%;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-strong));
+  transform: scaleX(0); transform-origin: 0 50%;
+}
+
+.site-nav__bar {
+  display: flex; align-items: center; justify-content: space-between;
+  height: var(--nav-h); gap: var(--space-6);
+}
+
+.site-nav__logo {
+  display: inline-flex; align-items: center;
+  font-weight: 700; font-size: var(--text-lg); letter-spacing: var(--tracking-tight);
+  color: var(--color-fg);
+  min-height: var(--touch-min); min-width: var(--touch-min);
+  justify-content: center;
+}
+
+.site-nav__links ul {
+  display: flex; align-items: center; gap: var(--space-8);
+}
+.site-nav__links a {
+  position: relative;
+  font-size: var(--text-sm); font-weight: 500; color: var(--color-fg-muted);
+  padding-block: var(--space-2);
+  transition: color var(--dur-base) var(--ease-expo);
+}
+.site-nav__links a::after {
+  content: ""; position: absolute; left: 0; right: 100%; bottom: -1px; height: 2px;
+  background: var(--color-accent); border-radius: var(--radius-full);
+  transition: right var(--dur-base) var(--ease-expo);
+}
+.site-nav__links a:hover { color: var(--color-fg); }
+.site-nav__links a.is-active { color: var(--color-fg); }
+.site-nav__links a.is-active::after { right: 0; }
+
+.site-nav__actions { display: flex; align-items: center; gap: var(--space-3); }
+
+.site-nav__resume { padding: 0 var(--space-4); font-size: var(--text-sm); }
+.site-nav__resume .icon { width: 1rem; height: 1rem; }
+
+.site-nav__toggle {
+  display: none;
+  position: relative;
+  width: var(--touch-min); height: var(--touch-min);
+  align-items: center; justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--color-fg);
+}
+.site-nav__toggle-icon {
+  position: absolute; transition: opacity var(--dur-base) var(--ease-expo), transform var(--dur-base) var(--ease-expo);
+}
+.site-nav__toggle-icon--close { opacity: 0; transform: rotate(-90deg) scale(0.6); }
+.site-nav__toggle[aria-expanded="true"] .site-nav__toggle-icon--open { opacity: 0; transform: rotate(90deg) scale(0.6); }
+.site-nav__toggle[aria-expanded="true"] .site-nav__toggle-icon--close { opacity: 1; transform: rotate(0) scale(1); }
+
+.site-nav__mobile {
+  position: absolute; top: 100%; left: 0; right: 0;
+  background: var(--color-bg-elevated);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding: var(--space-6) var(--gutter) var(--space-8);
+  display: flex; flex-direction: column; gap: var(--space-6);
+  max-height: 0; overflow: hidden; opacity: 0;
+  transition: max-height var(--dur-slow) var(--ease-expo), opacity var(--dur-base) var(--ease-expo);
+}
+.site-nav__mobile.is-open { max-height: 32rem; opacity: 1; }
+
+.site-nav__mobile-links { display: flex; flex-direction: column; gap: var(--space-1); }
+.site-nav__mobile-links a {
+  display: flex; align-items: center; min-height: var(--touch-min);
+  font-size: var(--text-lg); font-weight: 500; color: var(--color-fg-muted);
+}
+.site-nav__mobile-links a:hover,
+.site-nav__mobile-links a.is-active { color: var(--color-fg); }
+
+.site-nav__mobile-resume { width: 100%; }
+
+@media (min-width: 1024px) {
+  .site-nav__toggle,
+  .site-nav__mobile { display: none; }
+}
+
+@media (max-width: 1023.98px) {
+  .site-nav__links,
+  .site-nav__resume { display: none; }
+  .site-nav__toggle { display: inline-flex; }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: calc(100svh - var(--nav-h));
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  padding-block: var(--space-16);
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero__eyebrow { justify-content: center; }
+
+.hero__title {
+  margin-top: var(--space-6);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+}
+.hero__title .char { display: inline-block; will-change: transform, opacity; }
+
+.hero__tagline {
+  margin-top: var(--space-4);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-accent-strong);
+}
+
+.hero__summary {
+  margin-top: var(--space-4);
+  margin-inline: auto;
+  max-width: 56ch;
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-fg-muted);
+}
+
+.hero__ctas {
+  margin-top: var(--space-8);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: var(--space-4);
+}
+.hero__cta {
+  will-change: transform;
+  /* .btn (base.css) transitions transform on hover/press; GSAP drives transform here
+     directly (entrance reveal + magnetic hover via quickTo), and a live CSS transition
+     on the same property fights it frame-by-frame and can pin the value at its start
+     state. Keep the color/border transitions, drop transform from the list. */
+  transition: background-color var(--dur-base) var(--ease-expo),
+              color var(--dur-base) var(--ease-expo),
+              border-color var(--dur-base) var(--ease-expo);
+}
+.hero__cta .icon { width: 1.1rem; height: 1.1rem; }
+
+.hero__highlights {
+  margin-top: var(--space-16);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-6);
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: var(--space-8);
+}
+.hero__highlight { display: flex; flex-direction: column; gap: var(--space-1); }
+.hero__highlight-value {
+  font-size: var(--text-3xl); font-weight: 700; color: var(--color-fg);
+  letter-spacing: var(--tracking-tight);
+}
+.hero__highlight-label {
+  font-size: var(--text-sm); color: var(--color-fg-muted); line-height: var(--leading-normal);
+}
+
+.hero__scroll-cue {
+  position: absolute;
+  left: 50%; bottom: var(--space-8);
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-2);
+  color: var(--color-fg-subtle);
+  min-height: var(--touch-min);
+  justify-content: center;
+}
+.hero__scroll-cue:hover { color: var(--color-fg-muted); }
+.hero__scroll-cue-label {
+  font-size: var(--text-xs); letter-spacing: var(--tracking-wide); text-transform: uppercase;
+}
+.hero__scroll-cue-icon { width: 1.25rem; height: 1.5rem; }
+
+html.motion-ok .hero__scroll-cue-icon {
+  animation: hero-scroll-bob 2s var(--ease-expo) infinite;
+}
+@keyframes hero-scroll-bob {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+
+@media (max-width: 767.98px) {
+  .hero__inner { text-align: left; }
+  .hero__eyebrow { justify-content: flex-start; }
+  .hero__summary { margin-inline: 0; }
+  .hero__ctas { justify-content: flex-start; }
+  .hero__highlights { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero__scroll-cue { display: none; }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .hero__highlights { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

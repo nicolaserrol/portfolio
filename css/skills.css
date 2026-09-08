@@ -1,0 +1,83 @@
+/* Skills section — bento grid of skill groups, built in JS from resume.json. */
+
+.skills-head {
+  max-width: 42rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .skills-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.skills-card {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.skills-card--accent {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent-soft), 0 20px 60px -24px rgba(34, 197, 94, 0.35), var(--shadow-glow);
+  background: linear-gradient(160deg, var(--color-accent-soft), var(--color-surface) 55%);
+}
+
+.skills-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  color: var(--color-accent);
+  flex: none;
+}
+
+.skills-card--accent .skills-card-icon {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-strong);
+}
+
+.skills-card-icon .icon { width: 1.375rem; height: 1.375rem; }
+
+.skills-card-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-fg);
+  letter-spacing: var(--tracking-tight);
+}
+
+.skills-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.skills-card-list .chip {
+  transition: transform var(--dur-base) var(--ease-expo),
+              border-color var(--dur-base) var(--ease-expo),
+              color var(--dur-base) var(--ease-expo);
+}
+.skills-card-list .chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  color: var(--color-fg);
+}
+
+.skills-noscript {
+  margin-top: var(--space-8);
+  color: var(--color-fg-muted);
+  font-size: var(--text-sm);
+}

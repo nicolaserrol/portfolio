@@ -1,0 +1,95 @@
+{
+  "name": "Errol June P. Nicolas",
+  "shortName": "Errol Nicolas",
+  "title": "Lead Software Engineer",
+  "tagline": "React Native · Mobile · TypeScript",
+  "location": "Rizal, Philippines",
+  "yearsExperience": "8+",
+  "summary": [
+    "Lead Software Engineer with 8+ years of experience architecting, developing, releasing, and maintaining production mobile and web applications, with a strong focus on React Native and modern mobile development.",
+    "I own mobile features end-to-end: technical architecture, implementation planning, third-party integrations, performance optimization, production releases, and ongoing codebase improvements. I have led development of five production mobile applications and delivered customer-facing platforms supporting business transactions and operational workflows.",
+    "I work comfortably with external service providers and APIs (Apple HealthKit, Oura, Garmin, SurveyMonkey, Udemy Business, SendGrid, ActiveCampaign, ServiceReef) and use AI-assisted engineering workflows to accelerate delivery while keeping production quality."
+  ],
+  "industries": ["FinTech", "Retail", "Healthcare", "Automotive", "Fitness", "SaaS", "Enterprise", "Travel", "Field Services"],
+  "contact": {
+    "email": "erroljunenicolas@gmail.com",
+    "linkedin": "https://linkedin.com/in/ejnicolas",
+    "linkedinHandle": "ejnicolas",
+    "github": "https://github.com/nicolaserrol",
+    "githubHandle": "nicolaserrol",
+    "resumePdf": "./assets/Errol-Nicolas-Resume.pdf"
+  },
+  "skills": [
+    { "group": "Mobile", "items": ["React Native", "Expo", "iOS", "Android", "Push Notifications", "Deep Linking", "Mobile Architecture"] },
+    { "group": "Frontend", "items": ["ReactJS", "TypeScript", "JavaScript", "Redux", "HTML", "CSS", "Victory Native"] },
+    { "group": "APIs & Backend", "items": ["REST APIs", "GraphQL", "Supabase", "Firebase", "PostgreSQL", "SQLite", "Fastify", "Prisma", "Node.js"] },
+    { "group": "AI & Automation", "items": ["OpenAI API", "LLM Integration", "OCR", "AI Workflow Automation", "AI-Assisted Development", "MCP"] },
+    { "group": "Integrations", "items": ["Apple HealthKit", "Oura", "Garmin", "SurveyMonkey", "Udemy Business", "SendGrid", "ActiveCampaign", "ServiceReef"] },
+    { "group": "Tools & Practices", "items": ["Git", "GitHub", "JIRA", "Trello", "Sentry", "Docker", "CI/CD", "Agile/Scrum", "Cursor", "Windsurf", "Lovable.dev", "Claude Code"] }
+  ],
+  "experience": [
+    {
+      "id": "contractor",
+      "role": "Lead Software Engineer",
+      "company": "Independent Contractor",
+      "period": "Feb 2025 — Present",
+      "start": "2025-02",
+      "end": null,
+      "bullets": [
+        "Deliver end-to-end mobile and web solutions across automotive, fitness, travel, field-service and business application projects, translating client requirements into production-ready implementations.",
+        "Architect, develop, release and maintain React Native applications using Expo, TypeScript, Redux and modern mobile practices.",
+        "Lead continuous enhancement of a production vehicle-salvage platform, shipping mobile features aligned with operational efficiency.",
+        "Designed an AI-powered document scanning workflow on the OpenAI API to automate vehicle repair-estimate extraction, cutting manual encoding and human error.",
+        "Integrated SurveyMonkey, Udemy Business, SendGrid, ActiveCampaign and ServiceReef into ReactJS and Supabase applications.",
+        "Built a React Native fitness app with interactive health and analytics dashboards, syncing Apple HealthKit, Oura and Garmin into one experience.",
+        "Lead and review delivery across a multi-client agency portfolio: PR review, scope control, requirements traceability, and AI-assisted engineering workflows."
+      ]
+    },
+    {
+      "id": "mysuki",
+      "role": "Mobile Solutions Engineer",
+      "company": "MySuki Inc. PTE Ltd.",
+      "period": "Aug 2020 — Feb 2025",
+      "start": "2020-08",
+      "end": "2025-02",
+      "bullets": [
+        "Led end-to-end development of five production mobile applications using React Native, Expo, TypeScript and Redux.",
+        "Architected mobile features supporting retail supply-chain operations and communication between principals, supermarkets, distributors and sari-sari stores.",
+        "Delivered a fintech capital-assistance platform supporting digital business transactions and transaction-handling workflows.",
+        "Developed KPI and operational dashboards with Victory Native, giving enterprise customers actionable visibility into business performance.",
+        "Integrated push notifications, deep linking, local data handling and external APIs; maintained and enhanced production apps through iterative releases."
+      ]
+    },
+    {
+      "id": "pragtech",
+      "role": "Software Engineer",
+      "company": "Pragtechnologies Corp.",
+      "period": "Dec 2017 — Aug 2020",
+      "start": "2017-12",
+      "end": "2020-08",
+      "bullets": [
+        "Developed production healthcare applications using React Native, ReactJS, Expo, GraphQL and TypeScript.",
+        "Built customer-facing workflows for patients, doctors and clinics, including appointment management.",
+        "Implemented mobile and web features on API-driven architectures and contributed to maintenance and operational improvements."
+      ]
+    },
+    {
+      "id": "nuptl",
+      "role": "Founder",
+      "company": "Nuptl — wedding technology startup",
+      "period": "Side venture",
+      "start": null,
+      "end": null,
+      "bullets": [
+        "Founded Nuptl and launched both the React Native mobile app and the web platform from product concept through production.",
+        "Owned product and engineering direction: product architecture, frontend development, backend integration and iterative feature delivery."
+      ]
+    }
+  ],
+  "highlights": [
+    { "value": "8+", "label": "years in production software" },
+    { "value": "5", "label": "mobile apps led end-to-end" },
+    { "value": "10+", "label": "third-party platforms integrated" },
+    { "value": "9", "label": "industries shipped in" }
+  ]
+}
