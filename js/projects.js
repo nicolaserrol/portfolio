@@ -212,11 +212,16 @@ export function initProjects(ctx) {
 
     const finish = () => {
       cardEntries.forEach((entry) => { entry.el.hidden = !matches(entry); });
+      // Cards that were waiting on the scroll reveal (opacity 0, y 32) may now sit in the
+      // viewport after the grid re-lays out; the once-only ScrollTrigger will never fire for
+      // them, so force every matching card fully visible before animating the new ones in.
+      gsap.set(cardEntries.filter(matches).map((e) => e.el), { opacity: 1, y: 0 });
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
       if (toShow.length) {
         gsap.fromTo(
           toShow.map((e) => e.el),
           { opacity: 0, scale: 0.94 },
-          { opacity: 1, scale: 1, duration: 0.4, ease: 'expo.out', stagger: 0.04, clearProps: 'transform,opacity' }
+          { opacity: 1, scale: 1, duration: 0.4, ease: 'expo.out', stagger: 0.04, clearProps: 'transform' } // keep inline opacity: base.css [data-reveal] would reset it to 0
         );
       }
       announceCount(cardEntries.filter(matches).length);
